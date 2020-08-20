@@ -13,7 +13,7 @@ function build_docker() {
 }
 
 function run_docker() {
-	docker run -it jbotbase:$BUILD_NUMBER
+	docker run --rm jbotbase:$BUILD_NUMBER
 }
 	
 $1
