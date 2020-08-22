@@ -5,7 +5,7 @@ Step By Step Configuration for setting up a Jenkins Pipeline using a Git Repo
 + GO 
 
 ## Protyping 
-+ A simple GO REST Api for parsing and storing
++ A lightweight GO App
 
 ## Done
 + Tested Git repo in Jenkins
