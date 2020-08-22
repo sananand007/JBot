@@ -10,11 +10,11 @@ Step By Step Configuration for setting up a Jenkins Pipeline using a Git Repo
 ## Done
 + Tested Git repo in Jenkins
 + PR trigger only on webhook or only on PR build Triggers, cannot do both
++ Setup Slack Integration with Jenkins
 
 ### TODOs
 + Setup a Docker Environment in the Jenkins Slave
-+ Setup Slack Integration with Jenkins
-+ Push Images for Docker Registr
++ Push Images for Docker Registry
 + Setup a Jenkins github Actions as a check in the Reporsitory
 
 
