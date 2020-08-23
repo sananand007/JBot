@@ -5,6 +5,7 @@
   "env": {
     "GH_REF": "github.com/sananand007/JBot.git"
   },
+  "release": "0.1.0",
   "plans": {
     "release": {
       "env": {
