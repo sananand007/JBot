@@ -23,7 +23,7 @@ function run_docker() {
 function extract_token() {
 	token=$(jq '.token' $KEY_PATH)
     token="${token%\"}"
-    token="$${token#\"}"
+    token="${token#\"}"
 	echo $token
 }
 
