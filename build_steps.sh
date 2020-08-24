@@ -31,10 +31,15 @@ function post_gitStatus_success() {
 	echo "Post status after build succeeds"
 	git_token=$(extract_token)
 	URL="https://api.GitHub.com/repos/sananand007/JBot/statuses/$GIT_COMMIT?access_token=$git_token"
-	curl -s -H "$URL" \
+	curl "$URL" \
   		-H "Content-Type: application/json" \
   		-X POST \
-  		-d "{\"state\": \"success\",\"context\": \"continuous-integration/jenkins\", \"description\": \"Jenkins\", \"target_url\": $BUILD_URL}" >> output.txt
+  		-d "{
+            \"state\": \"success\",
+            \"context\": \"continuous-integration/jenkins\",
+            \"description\": \"Jenkins\",
+            \"target_url\": $BUILD_URL
+        }" >> output.txt
 
 }
 
