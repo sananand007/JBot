@@ -2,7 +2,7 @@
 
 set -eoux pipefail
 
-URL="https://api.GitHub.com/repos/sananand007/JBot/statuses/$GIT_COMMIT?access_token=1e06a847458078f1fdb0465c75c662a82c55e963"
+URL="https://api.GitHub.com/repos/sananand007/JBot/statuses/$GIT_COMMIT?access_token=$token"
 BUILD_URL="https://70483f2bdaf6.ngrok.io/job/JBot/$BUILD_NUMBER/console"
 
 function check_dir() {
