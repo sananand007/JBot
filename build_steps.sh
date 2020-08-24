@@ -2,7 +2,8 @@
 
 set -eoux pipefail
 
-URL="https://api.GitHub.com/repos/sananand007/JBot/statuses/$GIT_COMMIT?access_token=$token"
+
+KEY_PATH="/home/pi/keys/gittoken.json"
 BUILD_URL="https://70483f2bdaf6.ngrok.io/job/JBot/$BUILD_NUMBER/console"
 
 function check_dir() {
@@ -19,8 +20,15 @@ function run_docker() {
 	docker run --rm jbotbase:$BUILD_NUMBER
 }
 
+function extract_token() {
+	token=$(jq '.token' $KEY_PATH)
+	echo $token
+}
+
 function post_gitStatus_success() {
 	echo "Post status after build succeeds"
+	git_token=$(extract_token)
+	URL="https://api.GitHub.com/repos/sananand007/JBot/statuses/$GIT_COMMIT?access_token=$git_token"
 	curl -s -H URL \
   		-H "Content-Type: application/json" \
   		-X POST \
