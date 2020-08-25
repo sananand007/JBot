@@ -21,6 +21,7 @@ This Golang Repo is used as a Canary Deployement for bringing up a On-Premise Al
 + Tested Git repo in Jenkins
 + PR trigger only on webhook or only on PR build Triggers, cannot do both
 + Setup Slack Integration with Jenkins
++ Git PostBuildScripts added 
 
 ### TODOs
 + Setup a Docker Environment in the Jenkins Slave
@@ -31,4 +32,4 @@ This Golang Repo is used as a Canary Deployement for bringing up a On-Premise Al
 
 ## Maintainance
 + Setup a Docker clean/prune script - Maintainace Job
-+ Setup a regular Clean up of Logs and cruft - Maintaiance Job
++ Setup a regular Clean up of Logs and kruft - Maintaiance Job
